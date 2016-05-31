@@ -149,8 +149,8 @@
 		</plugin>--> 
 		
 		<plugin name="phonegap-facebook-plugin" spec="~1.0.0 ">
-			<variable name="APP_ID" value="585577864930206" />
-			<variable name="APP_NAME" value="SocialPhoto" />
+			<param name="APP_ID" value="585577864930206" />
+			<param name="APP_NAME" value="SocialPhoto" />
 		</plugin>
 		<plugin name="cordova-plugin-apprate" spec="https://github.com/pushandplay/cordova-plugin-apprate.git" />
 		 <plugin name="cordova-plugin-network-information" spec="~1.1.0" />
