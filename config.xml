@@ -1,0 +1,161 @@
+	<?xml version='1.0' encoding='utf-8'?>
+	<widget id="com.ls.socialphoto" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+		<name>socialphoto</name>
+		<description>
+			A sample Apache Cordova application that responds to the deviceready event.
+		</description>
+		<author email="dev@cordova.apache.org" href="http://cordova.io">
+			Apache Cordova Team
+		</author>
+		<content src="index.html" />
+		<plugin name="cordova-plugin-whitelist" spec="1" />
+		<access origin="*" />
+		<allow-intent href="http://*/*" />
+		<allow-intent href="https://*/*" />
+		<allow-intent href="tel:*" />
+		<allow-intent href="sms:*" />
+		<allow-intent href="mailto:*" />
+		<allow-intent href="geo:*" />
+			<platform name="android">
+		 
+			<splash density="land-hdpi" src="res/screen/android/drawable-land-hdpi/screen.png" />
+			<splash density="land-ldpi" src="res/screen/android/drawable-land-ldpi/screen.png" />
+			<splash density="land-mdpi" src="res/screen/android/drawable-land-mdpi/screen.png" />
+			<splash density="land-xhdpi" src="res/screen/android/drawable-land-xhdpi/screen.png" />
+			<splash density="land-xxhdpi" src="res/screen/android/drawable-land-xxhdpi/screen.png" />
+			<splash density="land-xxxhdpi" src="res/screen/android/drawable-land-xxxhdpi/screen.png" />
+			
+			<splash density="port-ldpi" src="res/screen/android/drawable-ldpi/screen.png" />
+			<splash density="port-hdpi" src="res/screen/android/drawable-hdpi/screen.png" />
+			<splash density="port-mdpi" src="res/screen/android/drawable-mdpi/screen.png" />
+			<splash density="port-xhdpi" src="res/screen/android/drawable-xhdpi/screen.png" />
+			<splash density="port-xxhdpi" src="res/screen/android/drawable-xxhdpi/screen.png" />
+			<splash density="port-xxxhdpi" src="res/screen/android/drawable-xxxhdpi/screen.png" />
+		
+			<preference name="android-build-tool" value="gradle" />
+			<preference name="SplashScreen" value="screen" />
+		 </platform>
+		   <platform name="ios">
+			<splash height="1004" src="res/screen/ios/Default.png" width="768" />
+			<splash height="960" src="res/screen/ios/Default@2x~iphone_640x960.png" width="640" />
+			<splash height="2008" src="res/screen/ios/Default~ipad.png" width="1536" />
+			<splash height="480" src="res/screen/ios/Default~iphone.png" width="320" />
+			<splash height="1136" src="res/screen/ios/Default-568h@2x~iphone_640x1136.png" width="640" />
+			<splash height="750" src="Default-750@2x~iphone6-landscape_1334x750.png" width="1334" />
+			<splash height="1334" src="Default-750@2x~iphone6-portrait_750x1334.png" width="750" />
+			<splash height="2208" src="res/screen/ios/Default-1242@3x~iphone6s-portrait_1242x2208.png" width="1242" />
+			<splash height="1242" src="res/screen/ios/Default-1242@3x~iphone6s-landscape_2208x1242.png" width="2208" />
+			<splash height="1496" src="res/screen/ios/Default-Landscape@2x~ipad_2048x1496.png" width="2048" />
+			<splash height="1536" src="res/screen/ios/Default-Landscape@2x~ipad_2048x1536.png" width="2048" />
+			<splash height="748" src="res/screen/ios/Default-Landscape~ipad_1024x748.png" width="1024" />
+			 <splash height="2048" src="res/screen/ios/Default-Portrait@2x~ipad_1536x2048.png" width="1536" />
+			<splash height="1024" src="res/screen/ios/Default-Portrait~ipad_768x1024.png" width="768" />
+			<splash height="2008" src="res/screen/ios/Default-Portrait@2x~ipad_1536x2008.png" width="1536" />
+		</platform>
+		
+		 <platform name="wp8">
+				  <splash src="res/screen/wp8/Splashscreen.jpg" width="480" height="800"/>
+		 </platform>
+		 <platform name="windows8">
+		<!-- images are determined by width and height. The following are supported -->
+		<splash src="res/screen/wp8/Splashscreen-620x300.png" width="620" height="300"/>
+		<splash src="res/screen/wp8/Splashscreen-868x420.png" width="868" height="420"/>
+		<splash src="res/screen/wp8/Splashscreen-1116x540.png" width="1116" height="540"/>
+	</platform>
+		  <preference name="AutoHideSplashScreen" value="false" />
+		<preference name="FadeSplashScreen" value="true" />
+		<preference name="FadeSplashScreenDuration" value="15000" />
+		<preference name="SplashScreen" value="screen" />
+		
+		
+		<platform name="android">
+
+		  <preference name="android-minSdkVersion" value="15" />
+			<allow-intent href="market:*" /> 
+		<icon density="ldpi" src="res/android/ldpi.png" />
+		<icon density="mdpi" src="res/android/mdpi.png" />
+		<icon density="hdpi" src="res/android/hdpi.png" />
+		<icon density="xhdpi" src="res/android/xhdpi.png" />
+		<icon density="xxhdpi" src="res/android/xxhdpi.png" />
+		<icon density="xxxhdpi" src="res/android/xxxhdpi.png" />
+		</platform>
+		
+		   <platform name="ios">
+        <icon height="57" src="res/ios/Icon.png" width="57" />
+		 <icon height="114" src="res/ios/Icon@2x.png" width="114" />
+		 <icon height="29" src="res/ios/Icon-29.png" width="29" />
+		 <icon height="40" src="res/ios/Icon-40.png" width="40" />
+		 <icon height="80" src="res/ios/Icon-40@2x.png" width="80" />
+		 <icon height="50" src="res/ios/Icon-50.png" width="50" />
+		 <icon height="58" src="res/ios/Icon-58.png" width="58" />
+        <icon height="60" src="res/ios/Icon-60.png" width="60" />
+		<icon height="72" src="res/ios/Icon-72.png" width="72" />
+		<icon height="144" src="res/ios/Icon-72@2x.png" width="144" />
+		    <icon height="76" src="res/ios/Icon-76.png" width="76" />
+			    <icon height="100" src="res/ios/Icon-100.png" width="100" />
+		<icon height="120" src="res/ios/Icon-120.png" width="120" />
+    <icon height="152" src="res/ios/Icon-152.png" width="152" />
+        <icon height="180" src="res/ios/Icon-180@3x" width="180" />
+     <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+	
+	 <platform name="wp8">
+              <icon src="res/wp/ApplicationIcon-24x24.png" width="24" height="24" />
+              <icon src="res/wp/ApplicationIcon-33x33.png" width="33" height="33" />
+              <icon src="res/wp/ApplicationIcon-44x44.png" width="44" height="44" />
+              <icon src="res/wp/ApplicationIcon-50x50.png" width="50" height="50" />
+              <icon src="res/wp/ApplicationIcon-58x58.png" width="58" height="58" />
+              <icon src="res/wp/ApplicationIcon-62x62.png" width="62" height="62" />
+              <icon src="res/wp/ApplicationIcon-70x70.png" width="70" height="70" />
+              <icon src="res/wp/ApplicationIcon-71x71.png" width="71" height="71" />
+              <icon src="res/wp/ApplicationIcon-99x99.png" width="99" height="99" />
+              <icon src="res/wp/ApplicationIcon-106x106.png" width="106" height="106" />
+              <icon src="res/wp/ApplicationIcon-120x120.png" width="120" height="120" />
+              <icon src="res/wp/ApplicationIcon-150x150.png" width="150" height="150" />
+              <icon src="res/wp/ApplicationIcon-170x170.png" width="170" height="170" />
+              <icon src="res/wp/ApplicationIcon-210x210.png" width="210" height="210" />
+              <icon src="res/wp/ApplicationIcon-360x360.png" width="360" height="360" />
+              <icon src="res/wp/AppSquareIcon-358x358.png" width="358" height="358" />
+              <icon src="res/wp/AppTitleIcon-300x300.png" width="300" height="33" />
+              <icon src="res/wp/Background.png" width="159" height="159" />
+          
+     </platform>
+	 
+	    <platform name="windows8">
+              <icon src="res/windows8/ApplicationIcon-16x16.png" width="16" height="16" />
+              <icon src="res/windows8/ApplicationIcon-24x24.png" width="24" height="24" />
+              <icon src="res/windows8/ApplicationIcon-30x30.png" width="30" height="30" />
+              <icon src="res/windows8/ApplicationIcon-32x32.png" width="32" height="32" />
+              <icon src="res/windows8/ApplicationIcon-42x42.png" width="42" height="42" />
+              <icon src="res/windows8/ApplicationIcon-48x48.png" width="48" height="48" />
+              <icon src="res/windows8/ApplicationIcon-50x50.png" width="50" height="50" />
+              <icon src="res/windows8/ApplicationIcon-54x54.png" width="54" height="54" />
+              <icon src="res/windows8/ApplicationIcon-70x70.png" width="70" height="70" />
+              <icon src="res/windows8/ApplicationIcon-90x90.png" width="90" height="90" />
+              <icon src="res/windows8/ApplicationIcon-120x120.png" width="120" height="120" />
+              <icon src="res/windows8/ApplicationIcon-150x150.png" width="150" height="150" />
+              <icon src="res/windows8/ApplicationIcon-210x210.png" width="210" height="210" />
+              <icon src="res/windows8/ApplicationIcon-256x256.png" width="256" height="256" />
+              <icon src="res/windows8/ApplicationIcon-270x270.png" width="270" height="270" />
+     </platform>
+		 
+			<preference name="exit-on-suspend" value="false" />
+			<preference name="phonegap-version" value="cli-6.0.0" />
+			<preference name="android-build-tool" value="gradle" />
+	<!-- <plugin name="cordova-plugin-facebook4" spec="~1.6.3">
+			<variable name="APP_ID" value="585577864930206" />
+			<variable name="APP_NAME" value="SocialPhoto" />
+		</plugin>--> 
+		
+		<plugin name="phonegap-facebook-plugin" spec="~1.0.0 ">
+			<variable name="APP_ID" value="585577864930206" />
+			<variable name="APP_NAME" value="SocialPhoto" />
+		</plugin>
+		<plugin name="cordova-plugin-apprate" spec="https://github.com/pushandplay/cordova-plugin-apprate.git" />
+		 <plugin name="cordova-plugin-network-information" spec="~1.1.0" />
+		<plugin name="cordova-plugin-geolocation" spec="~1.0.0" />
+		<plugin name="cordova-plugin-device" spec="~1.1.0" />
+		<plugin name="cordova-plugin-dialogs" spec="~1.2.0" />
+		<plugin name="cordova-plugin-inappbrowser" spec="~1" />
+	</widget>
