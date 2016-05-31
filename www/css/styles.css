@@ -1,0 +1,536 @@
+
+.login-bg  {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  background: url(../img/login-bk.png) no-repeat center fixed;
+  background-size: cover;
+}
+
+
+.logo  {
+  display:block; 
+  margin:190px auto 50px;
+ }
+ 
+.sign-in  {
+  display:block; 
+  margin:80px auto 5px;
+  cursor:pointer;
+}
+
+@media only screen and (max-height: 500px) {
+
+.logo  {
+  display:block; 
+  margin:125px auto 50px;
+ }
+ 
+}
+
+@media only screen and (max-height: 590px) {
+
+.logo  {
+  display:block; 
+  margin:165px auto 50px;
+ }
+ 
+}
+
+@media only screen and (min-height: 700px) {
+
+.logo  {
+  display:block; 
+  margin:235px auto 50px;
+ }
+ 
+}
+
+/* page 3 */
+
+.no-padding {
+  padding:0;
+}
+
+.inner-page-bg  {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+  background: url(../img/inner-page-bk.png) no-repeat center fixed;
+  background-size: cover;
+}
+
+.app-name-header  {
+ color:#fff;
+ font:20px Lato;
+ font-weight:400;
+ text-align:center;
+}
+
+.app-name-header>i  {
+ color:#fff;
+ font-size:23px;
+ margin-top:1px;
+ cursor:pointer;
+}
+
+.app-header {
+  padding-bottom: 0; 
+    margin: 9px 0 20px;
+    border-bottom: none;
+}
+
+.social-tabs-bg  {
+  background-color:#d6423a;
+    margin: 0 -15px 8px;
+    padding: 7px 12px;
+}
+ 
+.social-tabs  {
+  color:#fff;
+  font-size:21px;
+  border:1px solid #fff;
+  border-radius:6px;
+  background-color:transparent;
+  padding:2px 12px;
+}
+
+.btn-group>.social-tabs:focus  {
+  background-color:#fff;
+}
+
+.album  {
+  max-width: 100%;
+  max-height: 100%;
+  height:158px;
+  width:158px
+}
+
+.album-img-container {
+  /*height: 150px;  
+  position: relative; */
+}
+
+.album-img-container > img {
+ /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+   max-width: 100%;
+  max-height: 100%;
+   height:158px;
+  width:158px;
+}
+
+.picalbum  {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.album-info-bg {
+ background-color:#fff; margin:0; padding:1px 8px 1px 9px;
+}
+
+.album-name  {
+  font:18px Lato; font-weight:700; 
+  color:#e35757;
+  overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+ }
+ 
+.album-count {
+   font:12px Lato; color:#9e9e9e; float:right; margin-top:16px;
+   overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+ }
+ 
+/* page 4 */
+ 
+ .tag-names  {
+   font:18px Lato; font-weight:700; 
+  color:#a7a7a7;
+  overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+background-color:#fff;
+padding:10px 11px 11px 7px;
+margin-top:0;
+}
+
+.tag-names-active  {
+   font:18px Lato; font-weight:700; 
+  color:#e35757;
+  overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+background-color:#fff;
+padding:10px 11px 11px 7px;
+margin-top:0;
+}
+
+.tag-names>i  {
+   padding-right:4px;
+   color:#a7a7a7;
+}
+
+.tag-names-active>i  {
+   padding-right:4px;
+   color:#e35757;
+}
+
+/* page 6  */
+
+.my-order-text  {
+  color:#fff;
+  font:20px Lato;
+  font-weight:400;
+  margin-bottom:22px;
+  margin-top:22px;
+}
+
+.order-report {
+  background:#fff;padding:7px;
+ }
+ 
+.order-processing, .order-date  {
+  color:#291712;
+  font:16px Lato; font-weight:700; margin-bottom:2px;
+  margin-top:2px; 
+  overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+  }
+ 
+.order-date  span {
+  font-size:15px;
+  color:#e35757;  
+float:right;
+margin-top:1px;
+padding-right:10px;
+}
+
+.order-delivered, .order-delivered-date  {
+  color:#bcbcbc;
+  font:16px Lato; font-weight:700; margin-bottom:2px;
+  margin-top:2px; 
+  overflow: hidden;
+    text-overflow: ellipsis;
+	white-space: nowrap;
+  }
+ 
+.order-delivered-date  span {
+  font-size:15px;
+float:right;
+margin-top:1px;
+padding-right:10px;
+}
+
+.media-object  {
+  border:1px solid #e0e0e0;
+}
+
+/* order-page  */
+
+.photos-selected-text  {
+  color:#fff;
+  font:18px Lato;
+  font-weight:400;
+  margin-top:22px;
+  margin-bottom:14px;
+}
+
+.order-btns  {
+  padding-top:3px; padding-bottom:3px;
+  
+}
+
+.order-btns>.btn  {
+  padding:1px 10px;
+  border:none;
+}
+
+.order-btns>.btn:hover  {
+  background:transparent;
+}
+
+.order-btns>.btn>i  {
+  border:none;
+  color:#a8a8a8;
+  font-size:27px;
+ }
+ 
+.order-count  {
+ font:23px Lato;
+ font-weight:700;
+ color:#191919;
+ cursor:default;
+ }
+ 
+.order-btn-bg {
+  background-color:#fff; margin-top:-6px;
+}
+
+.print-cost  {
+text-align:center;
+font:17px Lato;
+font-weight:700;
+color:#fff;
+margin:25px auto 10px;
+
+}
+
+.print-cost span  {
+text-align:center;
+font-weight:700;
+color:#ea4940;
+padding-left:7px;
+}
+
+.get-free-btn  {
+  background:transparent;
+  display:inline-block;
+  border:1px solid #fff;
+  color:#fff;
+  font:15px Lato;
+  font-weight:400;
+  margin:10px 2px 15px;
+  border-radius:2px;
+  padding:8px 22px;
+}
+
+.buy-now-btn  {
+  background:#ea4940;
+  display:inline-block;
+  border:1px solid #ea4940;
+  color:#fff;
+  font:15px Lato;
+  font-weight:400;
+   margin:10px 2px 15px;
+  border-radius:2px;
+  padding:8px 25px;
+}
+
+/* page 7  */
+
+.order-info_in-detail {
+  background:#fff;padding:7px 10px 20px 8px;
+ }
+ 
+.order-info_in-detail p  {
+  color:#aaa7a6;
+  font:15px Lato;
+}
+  
+.order-info_in-detail>p>span{
+  color:#adadad;
+  font:15px Lato;
+  float:right;
+  margin-top:1px;
+  }
+  
+.order-info_in-detail>h5:first-of-type  {
+   padding-top:14px;
+}
+  
+.order-info_in-detail h5  {
+  color:#291712;
+  font:15px Lato;
+  font-weight:700;
+}
+  
+.order-info_in-detail>h5>span{
+  color:#e35757;
+  font:15px Lato;
+  font-weight:700;
+  float:right;
+  }
+
+  .carousel-inner>.item>img  {
+    width: 100%;
+    height: 260px !important;
+}
+
+.carousel-control {
+opacity:1;
+}
+
+.carousel-control>.left-click, .carousel-control .icon-prev {
+    left: 50%;
+    margin-left: -10px;
+}
+.carousel-control> .left-click, .carousel-control> .right-click, .carousel-control .icon-next, .carousel-control .icon-prev {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+	opacity:1
+}
+
+.carousel-control>.right-click, .carousel-control .icon-next {
+    right: 50%;
+    margin-right: -10px;
+}
+
+.carousel-control> .right-click, .carousel-control .icon-next {
+    position: absolute;
+    top: 50.5%;
+    z-index: 5;
+    display: inline-block;
+	
+}
+
+
+
+/* 26/4/2016 */
+
+.place-order-btn  {
+   background:#ea4940;
+  border:1px solid #ea4940;
+  color:#fff;
+  font:16px Lato;
+  font-weight:400;
+  border-radius:2px;
+  padding:15px 0 18px;
+  position:fixed;
+  left:0;
+  bottom:0% 
+}
+
+.add-photo-btn  {
+  background:#ea4940;
+  display:inline-block;
+  border:1px solid #ea4940;
+  color:#fff;
+  font:15px Lato;
+  font-weight:400;
+   margin:10px 2px 15px;
+  border-radius:2px;
+  padding:7px 20px;
+}
+
+
+
+
+/* added 26/4/2016  */
+
+.search-panel  {
+  font-size:18px;
+  font-family:Lato;
+  font-weight:400;
+  height:50px;
+  border-color:#fff;
+  box-shadow:none;
+  }
+
+.search-panel:focus {
+  box-shadow: none;
+  border:1px solid #fff;
+ }
+  
+.search>.input-group-addon {
+  background:#fff;
+  border-color:#fff;
+  border-radius:0; 
+  cursor:pointer;
+}
+
+.input-group-addon:first-child {
+    border-right: 1px solid #fff;
+}
+
+.input-group-addon:last-child {
+    border-left: 1px solid #fff;	
+}
+
+.search>.input-group-addon>.fa-times  {
+  font-size:25px;
+}
+
+.search>.input-group-addon>.fa-arrow-left  {
+  font-size:22px;
+}
+
+
+
+/* page 8 order-details  28/4/2016 */
+
+.order-address-info {
+  background:#fff;padding:20px 12px 30px 12px;
+ }
+ 
+.place-order-info>label  {
+  color:#a9a8a6;
+  font:15px Lato;
+  font-weight:700;
+}
+ 
+.place-order-info>input  {
+  border:none;
+  border-bottom:2px solid #aba7a6;
+  border-radius:0;
+  box-shadow:none;
+  padding:1px;
+  color:#000;
+  font:18px Lato;
+  font-weight:700;
+ }
+  
+.place-order-info>input:focus  {
+  box-shadow:none;
+  border-color:#aba7a6;
+ }
+
+.text-color::-webkit-input-placeholder
+{
+  color: #000;
+}
+
+.text-color:-moz-placeholder
+{
+  color: #000;
+}
+
+.text-color::-moz-placeholder
+{
+  color: #000;
+}
+
+.text-color:-ms-input-placeholder
+{
+ color: #000;
+}
+
+.order-it-btn  {
+  color:#fff;
+  font:19px Lato;
+  font-weight:400;
+  background-color:#ea493f;
+  text-align:center;
+  padding:11px 35px 12px;
+  border-radius:3px;
+  display:block;
+  margin:20px auto 10px;
+  }
+  
+ /* for showing spinner*/
+ 	.modal {
+	    display: none;
+	    position: fixed;
+	    z-index: 1000;
+	    top: 0;
+	    left: 0;
+	    height: 100%;
+	    width: 100%;
+	    background: rgba( 255, 255, 255, .8) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;
+	}
+	
+	
+	body.loading {
+	    overflow: hidden;
+	}
+	
+	
+	body.loading .modal {
+	    display: block;
+	}
+  

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>Album Gallery View</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/font-awesome.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,900' rel='stylesheet' type='text/css'>
+		<script src="js/jquery.min.js"></script>
+         <script src="cordova.js"></script>
+		<script src="js/login.js"></script>
+		<script type="text/javascript" src="js/cloudinary/jquery.ui.widget.js"></script>
+		<script type="text/javascript" src="js/cloudinary/jquery.iframe-transport.js"></script>
+		<script type="text/javascript" src="js/cloudinary/jquery.fileupload.js"></script>
+		<script type="text/javascript" src="js/cloudinary/jquery.cloudinary.js"></script>
+		<script src="js/commonmethods.js"></script>
+		
+	</head>
+	
+	<body>
+	    
+		<div class="container-fluid">
+		    
+			<div class="row">
+			    <div class="col-xs-12 col-sm-12 inner-page-bg">
+				    <div class="page-header app-header">
+                        <h5 class="app-name-header"><i class="fa fa-arrow-left pull-left" onclick="loginMethods.goBack()"></i> Social Studio <i class="fa fa-search pull-right"></i></h5>
+                    </div>
+					
+					<div class="text-center social-tabs-bg">
+					    <div class="btn-group btn-group-justified" role="group" aria-label="Basic example">
+                            <button type="button" class="btn social-tabs fb" onclick="loginMethods.displylastfbpic()"><i class="fa fa-facebook-official"></i></button>
+                            <button type="button" class="btn social-tabs insta" onclick="loginMethods.linkInstagram()"><i class="fa fa-instagram"></i></button>
+                            <button type="button" class="btn social-tabs local" onclick="loginMethods.showAddbtn()"><i class="fa fa-file-photo-o"></i></button>
+                         </div>
+					</div>
+					<div class="text-center" id="addbtn" style="display:none">
+					
+					    <label class="btn add-photo-btn" for="my-file-selector">
+                         <input  id="my-file-selector" class="uploader" type="file" name="file" style="display:none">
+                            Add Photo
+                        </label>
+					</div>
+					<div class="row albumpic" style="margin:0px" >
+					<!--<div class="row" style="padding-top:5px;">
+                        <div class="col-xs-6 col-sm-6" style="padding-right:7px;">
+                            <div class="card card-block">
+							    <img class="card-img-top album" src="./img/album-pic.png">
+								<h4 class="card-title tag-names-active"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>
+									
+                            </div>
+                        </div>
+						
+						<div class="col-xs-6 col-sm-6" style="padding-left:7px;">
+                            <div class="card card-block">
+							    <img class="card-img-top album" src="./img/album-pic.png">
+								<h4 class="card-title tag-names"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>
+									
+                            </div>
+                        </div>
+                    </div>
+					
+				    <div class="row" >
+                        <div class="col-xs-6 col-sm-6" style="padding-right:7px;">
+                            <div class="card card-block">
+							    <img class="card-img-top album" src="./img/album-pic.png">
+								<h4 class="card-title tag-names-active"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>
+									
+                            </div>
+                        </div>
+						
+						<div class="col-xs-6 col-sm-6" style="padding-left:7px;">
+                            <div class="card card-block">
+							    <img class="card-img-top album" src="./img/album-pic.png">
+								<h4 class="card-title tag-names"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>
+									
+                            </div>
+                        </div>
+                    </div> -->
+					</div >
+					<div style="padding-top:85px;">
+					<button type="button" class="btn btn-block place-order-btn" onclick="loginMethods.placeorder()">Place Order</button>
+					</div>
+				</div> <!-- col with class = inner-page-bg  --->
+			
+			</div><!-- row --->
+		
+		</div><!-- container --->
+	<div class="modal">
+        <!-- Place at bottom of page -->
+    </div>
+	<script type="text/javascript" src="js/cloudinary/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="js/cloudinary/jquery.iframe-transport.js"></script>
+    <script type="text/javascript" src="js/cloudinary/jquery.fileupload.js"></script>
+    <script type="text/javascript" src="js/cloudinary/jquery.cloudinary.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+
+		<script>
+			$('.albumpic').html('')
+		    $('.btn-group').each(function(index, item) {
+                $(item).find('.btn').css(
+                    'width', 100 / $(item).find('.btn').length + '%'
+                )
+            });
+	
+
+			if(localStorage.onalbum=='true')
+	        { 
+			localStorage.onalbum=false
+			loginMethods.displyinstapic()
+			}
+			else if (localStorage.localclicked == 'true') { 
+			$('#addbtn').show();
+			loginMethods.bindCloudinary()
+			localStorage.localclicked=false ;
+			$('.albumpic').html('')
+			console.log(localStorage['camcarrayy'])
+			/*if(localStorage['camcarrayy'])
+			{
+			var camcarray= new Array()
+			    camcarray =JSON.parse(localStorage['camcarrayy'])
+				
+			if(camcarray.length>0)
+			if (camcarray.length % 2 == 0) {
+                for (var j = 0; j < camcarray.length; j += 2) {
+                    $('.albumpic').append('<div class="row" style="padding-top:5px;">\
+                        <div class="col-xs-6 col-sm-6" style="padding-right:7px;">\
+                            <div class="card card-block">\
+							    <img class="card-img-top album" src="' + camcarray[j]+ '">\
+								<h4 class="card-title tag-names-active" data-url="'+camcarray[j]+'" onclick="loginMethods.selectcampic(this)"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>\
+									\
+                            </div>\
+                        </div><div class="col-xs-6 col-sm-6" style="padding-left:7px;">\
+                            <div class="card card-block">\
+							    <img class="card-img-top album" src="' +camcarray[j + 1] + '">\
+								<h4 class="card-title tag-names-active" data-url="'+camcarray[j + 1] +'" onclick="loginMethods.selectcampic(this)"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>\
+									\
+                            </div>\
+                        </div>\
+                    </div>')
+				
+
+                }
+
+
+            } else {
+                for (var j = 0; j < length - 1; j += 2) {
+
+
+                     $('.albumpic').append('<div class="row" style="padding-top:5px;">\
+                        <div class="col-xs-6 col-sm-6" style="padding-right:7px;">\
+                            <div class="card card-block">\
+							    <img class="card-img-top album" src="' + camcarray[j] + '">\
+								<h4 class="card-title tag-names-active" data-url="'+camcarray[j] +'" onclick="loginMethods.selectcampic(this)"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>\
+									\
+                            </div>\
+                        </div><div class="col-xs-6 col-sm-6" style="padding-left:7px;">\
+                            <div class="card card-block">\
+							    <img class="card-img-top album" src="' + camcarray[j + 1] + '">\
+								<h4 class="card-title tag-names-active" data-url="'+camcarray[j + 1] +'" onclick="loginMethods.selectcampic(this)"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>\
+									\
+                            </div>\
+                        </div>\
+                    </div>')
+
+                }
+				
+				  $('.albumpic').append('<div class="row" style="padding-top:5px;">\
+                        <div class="col-xs-6 col-sm-6" style="padding-right:7px;">\
+                            <div class="card card-block">\
+							    <img class="card-img-top album" src="' + camcarray[camcarray.length - 1] + '">\
+								<h4 class="card-title tag-names-active" data-url=" '+ camcarray[camcarray.length - 1]+'" onclick="loginMethods.selectcampic(this)"><i class="fa fa-check-square"></i> Tag1, Tag2, Tag3, Tag4</h4>\
+									\
+                            </div>\
+                        </div><div class="col-xs-6 col-sm-6" style="padding-left:7px;">\
+                            \
+                        </div>\
+                    </div>')
+
+			
+			}
+			}*/
+			}
+			else
+			loginMethods.displyfbpic()
+			
+		</script>
+	</body>
+</html>
