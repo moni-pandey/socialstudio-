@@ -134,12 +134,14 @@ getUserInfo : function()
 	   success : function(data)
 			    { 
 				console.log(data)
-				//alert(JSON.stringify(data))
-				if(data.results.length)
+				var vdata =JSON.parse(data.results)
+					//alert(vdata.length)
+					console.log(vdata)
+			//alert(data.results.length)
+				if(vdata.length)
 				{
 					console.log(data)
-					var vdata =JSON.parse(data.results)
-					console.log(vdata)
+					
 				localStorage.userid=vdata[0].userId
 				console.log(vdata.userId)
 				localStorage.present=true
